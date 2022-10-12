@@ -1,0 +1,44 @@
+1.pom.xml 파일 수정
+<dependency> 
+	<groupId>javax.servlet</groupId> 
+	<artifactId>jstl</artifactId> 
+</dependency> 
+<dependency> 
+	<groupId>org.apache.tomcat.embed</groupId> 
+	<artifactId>tomcat-embed-jasper</artifactId> 
+</dependency>
+
+2.application.properties 파일 수정
+src/main/resources/application.properties
+
+spring.mvc.view.prefix=/WEB-INF/views/ 
+spring.mvc.view.suffix=.jsp 
+server.port=8088
+--------------------------------------------------
+spring.mvc.view.prefix=/WEB-INF/views/
+
+spring.mvc.view.suffix=.jsp
+
+뷰(view) 파일의 위치와 확장자를 지정한다.
+
+/WEB-INF/views/뷰이름.jsp
+
+3. 페이지 구현
+controller 클래스 구현
+URL요청에 의해 서버에서 실행될 controller클래스와 action method를 구현
+
+view파일 구현
+페이지의 내용을 출력하기 위해 뷰 파일을 구현해야 한다.
+ex)
+home/index 페이지 구현
+src/main/webapp/WEB-INF/views/home/index.jsp
+WEB-INF/views 부분은 prefix
+.jsp는 suffix와 일치해야 한다.
+ 
+4.웹브라우저 실행
+http://localhost:8088/home/index URL실행
+
+
+
+
+
