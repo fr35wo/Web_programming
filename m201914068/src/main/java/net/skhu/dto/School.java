@@ -7,6 +7,7 @@ public class School {
 	int buildingId;
 	String roomType;
 	String buildingName;
+
 	public int getId() {
 		return id;
 	}
